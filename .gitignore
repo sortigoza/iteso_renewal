@@ -1,0 +1,10 @@
+/*.zip
+.DS_Store
+delete
+tmp_rumbda
+index.zip
+
+tmp_rumbda
+
+.env
+Gemfile.lock

@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  pack:
+    image: lambda-pack
+    build:
+      context: .
+      dockerfile: Dockerfile.pack
+    volumes:
+    - ./:/project
