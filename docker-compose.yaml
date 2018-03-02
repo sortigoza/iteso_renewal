@@ -5,6 +5,7 @@ services:
     image: lambda-pack
     build:
       context: .
-      dockerfile: Dockerfile.pack
+      dockerfile: Dockerfile
+    command: ["cp", "/project/index.zip", "/out/index.zip"]
     volumes:
-    - ./:/project
+    - ./out:/out

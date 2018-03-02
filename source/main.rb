@@ -1,9 +1,15 @@
 require 'rubygems'
+require 'bundler/setup'
 require 'mechanize'
 
 main_page = 'https://opac.biblio.iteso.mx/vufind/MyResearch/Home'
 user = ENV['USERNAME']
 password = ENV['PASSWORD']
+
+if user.nil? || password.nil?
+  print 'missing user, password'
+  exit(0)
+end
 
 agent = Mechanize.new
 page = agent.get(main_page)
